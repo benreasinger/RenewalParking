@@ -50,6 +50,7 @@ function renderParkingMap() {
 
 // Function to open the modal for entering car number or changing slot count
 function openModal(action, slotNumber = null) {
+  console.log("Testing Modal");
   currentModalAction = action;
   currentSlotNumber = slotNumber;
   const modalTitle = document.getElementById("modalTitle");
