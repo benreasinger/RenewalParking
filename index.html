@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <h1 class="title">Renewal Parking Map</h1>
+    <div class="buttons">
+      <button class="changebutton" onclick="openModal('slotCount')">Change Park Slots</button>
+    </div>
+</div>
+
+  
+  <div id="parkingMap"></div>
+
+  <!-- Modal for entering car number or changing slot count -->
+  <div id="carModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle">Enter Car Number</h3>
+      <input type="text" id="carInput" placeholder="Enter here..." maxlength="8">
+      <p id="warningMessage" class="warning-message" style="display: none;">
+        <strong>Warning:</strong> Reducing the number of parking slots will erase any car number data from removed slots.
+      </p>
+      <button id="modalConfirmButton" onclick="confirmAction()">Confirm</button>
+    </div>
+  </div>
+
+  <script src="/scripts/script.js"></script>
+</body>
+</html>
